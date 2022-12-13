@@ -8,3 +8,6 @@ public/
 example/
 src/
 rollup.config.js
+.gitignore
+index.js
+.history/*
