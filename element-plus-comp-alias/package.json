@@ -1,7 +1,8 @@
 {
   "name": "element-plus-comp-alias",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom Prefix Of Element Plus Component Name",
+  "license": "MIT",
   "main": "lib/index.min.js",
   "scripts": {
     "build": "npx rollup -c"
