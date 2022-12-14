@@ -11,3 +11,4 @@ rollup.config.js
 .gitignore
 index.js
 .history/*
+package-lock.json
