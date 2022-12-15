@@ -1,10 +1,22 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
-</script>
-
 <template>
   <div id="app">
+    <my-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+  <my-menu-item index="1">处理中心</my-menu-item>
+  <my-submenu index="2">
+    <template slot="title">我的工作台</template>
+    <my-menu-item index="2-1">选项1</my-menu-item>
+    <my-menu-item index="2-2">选项2</my-menu-item>
+    <my-menu-item index="2-3">选项3</my-menu-item>
+    <my-submenu index="2-4">
+      <template slot="title">选项4</template>
+      <my-menu-item index="2-4-1">选项1</my-menu-item>
+      <my-menu-item index="2-4-2">选项2</my-menu-item>
+      <my-menu-item index="2-4-3">选项3</my-menu-item>
+    </my-submenu>
+  </my-submenu>
+  <my-menu-item index="3" disabled>消息中心</my-menu-item>
+  <my-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></my-menu-item>
+</my-menu>
     <my-row>
       <my-col :span="12"
         ><div class="grid-content bg-purple">123123</div></my-col
@@ -77,6 +89,8 @@ export default {
       checked: true,
       input: "",
       num: 1,
+      activeIndex: '1',
+        activeIndex2: '1',
       options: [
         {
           value: "选项1",
@@ -106,6 +120,9 @@ export default {
     handleChange(value) {
       console.log(value);
     },
+    handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+      }
   },
 };
 </script>

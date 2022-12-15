@@ -20,8 +20,8 @@ export const createElementPlusCompAlias = prefix => ({
     const components = Object.keys(ele).filter(k => isComponet(k)).map(k => ele[k]);
     components.forEach(c => {
       const customComp = Object.assign({}, c);
-      customComp.name = renameCompoent(customComp.name, prefix)
-      app.component(customComp.name, customComp)
+      const newName = renameCompoent(customComp.name, prefix)
+      app.component(newName, customComp)
     })
     ele.install(app, options)
   }

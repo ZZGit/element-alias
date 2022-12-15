@@ -19,8 +19,8 @@ export const createElementUICompAlias = prefix => ({
     const components = Object.keys(ele).filter(k => isComponet(k)).map(k => ele[k]);
     components.forEach(c => {
       const customComp = Object.assign({}, c);
-      customComp.name = renameCompoent(customComp.name, prefix)
-      Vue.component(customComp.name, customComp);
+      const newName = renameCompoent(customComp.name, prefix)
+      Vue.component(newName, customComp);
     })
     ele.install(Vue, options)
   }
