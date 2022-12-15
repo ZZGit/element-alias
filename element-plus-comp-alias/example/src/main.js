@@ -7,7 +7,7 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-const ElementPlus = createElementPlusCompAlias('my')
+const ElementPlus = createElementPlusCompAlias({prefix: 'My', mode: 'replace'})
 
 app.use(ElementPlus)
 app.mount('#app')
