@@ -1,6 +1,6 @@
 {
   "name": "element-plus-comp-alias",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom Prefix Of Element Plus Component Name",
   "license": "MIT",
   "main": "lib/index.min.js",

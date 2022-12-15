@@ -1,6 +1,6 @@
 {
   "name": "element-ui-comp-alias",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom Prefix Of Element UI Component Name",
   "main": "lib/index.min.js",
   "repository": {
