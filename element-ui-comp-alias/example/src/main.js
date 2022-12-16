@@ -5,7 +5,7 @@ import {createElementUICompAlias} from 'element-ui-comp-alias'
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/main.css'
 
-const ElementUI = createElementUICompAlias('my')
+const ElementUI = createElementUICompAlias({prefix: "My"})
 
 Vue.use(ElementUI);
 
